@@ -1,9 +1,8 @@
 <?php
 
-
-require_once(__DIR__ . "/../libs/Database.php");
-require_once(__DIR__ . "/../libs/modelo.php");
-include_once("../clases/Aprendiz.php");
+require_once(__DIR__ . "/../../libs/Database.php");
+require_once(__DIR__ . "/../../libs//modelo.php");
+include_once("../../clases/Aprendiz.php");
 
 $database = new Database();
 $conection = $database->getConection();
@@ -42,7 +41,7 @@ echo"<pre>";
         <input type="text" name="phone" value="<?=$usuario['phone']?>">
     </div>
     <div>
-        <label>Telefono</label>
+        <label>Numero de Identificacion</label>
         <input type="text" name="dni" value="<?=$usuario['dni']?>" readonly>
     </div>
     <div>

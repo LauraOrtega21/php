@@ -2,8 +2,9 @@
 
 
 require_once(__DIR__ . "/../../libs/Database.php");
-require_once(__DIR__ . "/../../libs/modelo.php");
+require_once(__DIR__ . "/../../libs//modelo.php");
 include_once("../../clases/Aprendiz.php");
+
 
 $database = new Database();
 $conection = $database->getConection();
@@ -44,7 +45,7 @@ $lista = $aprendiz->getAll();
             <td>
                 <div>
                     <a href="editar.php?id=<?= $lista [$i] ['id']?>">Editar</a>
-                    <form action="eliminar_Aprendiz.php" method="post">
+                    <form action="eliminar.php" method="post">
                         <input type="hidden" name="id" value="<?= $lista[$i]['id']?>">
                         <button type="submit">Eliminar</button>
 

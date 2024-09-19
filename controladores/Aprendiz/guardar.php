@@ -1,13 +1,12 @@
 <?php
 
 
-require_once(__DIR__ . "/../libs/Database.php");
-require_once(__DIR__ . "/../libs/modelo.php");
-include_once("../clases/Aprendiz.php");
+require_once(__DIR__ . "/../../libs/Database.php");
+require_once(__DIR__ . "/../../libs//modelo.php");
+include_once("../../clases/Aprendiz.php");
 
 
-
-$nombre = isset( $_POST['firts_name']);
+$nombre = isset($_POST['firts_name']);
 
 $nombre = isset($_POST['firts_name']) ?
     ($_POST['firts_name'] != "" ? $_POST['firts_name'] : false) :
@@ -49,7 +48,7 @@ if ($nombre && $apellido && $fecha_Nacimiento && $correo && $telefono && $identi
     ]);
 
     if ($valor != null) {
-        header('location:/adso/2696521/PHP/controladores/listar.php');
+        header('location:/adso/2696521/PHP/controladores/Aprendiz/listar.php');
     }
     echo "Guardar"; 
 }else{
